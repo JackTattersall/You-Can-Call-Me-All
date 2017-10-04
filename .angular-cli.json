@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.sass"
+        "styles.scss",
+        "assets/vendor/css/grid.min.scss",
+        "assets/vendor/scss/ionicons.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -54,7 +56,8 @@
     }
   },
   "defaults": {
-    "styleExt": "sass",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }
