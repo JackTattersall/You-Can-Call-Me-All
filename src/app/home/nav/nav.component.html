@@ -1,16 +1,24 @@
 <div id='cssmenu'>
   <ul>
-    <img src="../../../assets/images/call_me_al.png" alt="">
-    <li class='last'><a href='#'><span>Audio</span></a></li>
-    <li class='last'><a href='#'><span>Sweet Links</span></a></li>
-    <li class='has-sub'><a href='#'><span>Beano's Guides</span></a>
+    <img src="../../../assets/images/call_me_al.png" alt="call me al">
+    <li class='last' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <a routerLink="audio"><span>Audio</span></a>
+    </li>
+    <li class='last' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <a routerLink="sweet-links"><span>Sweet Links</span></a>
+    </li>
+    <li class='has-sub' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a><span>Beano's Guides</span></a>
       <ul>
-        <li><a href='#'><span>Winning At Life</span></a></li>
-        <li><a href='#'><span>Hobbies</span></a></li>
-        <li class='last'><a href='#'><span>Travel</span></a></li>
+        <li><a routerLink="guides/winning-at-life"><span>Winning At Life</span></a></li>
+        <li><a routerLink="guides/hobbies"><span>Hobbies</span></a></li>
+        <li class='last'><a routerLink="guides/travel"><span>Travel</span></a></li>
       </ul>
     </li>
-    <li class='last'><a href='#'><span>Blogs</span></a></li>
-    <li class='active'><a href='#'><span>Home</span></a></li>
+    <li class='last' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <a routerLink="blogs"><span>Blogs</span></a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <a routerLink=""><span>Home</span></a>
+    </li>
   </ul>
 </div>

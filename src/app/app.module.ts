@@ -10,6 +10,7 @@ import { HobbiesComponent } from './guides/hobbies/hobbies.component';
 import { TravelComponent } from './guides/travel/travel.component';
 import { SweetLinksComponent } from './sweet-links/sweet-links.component';
 import { AudioComponent } from './audio/audio.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AudioComponent } from './audio/audio.component';
     HobbiesComponent,
     TravelComponent,
     SweetLinksComponent,
-    AudioComponent
+    AudioComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
