@@ -1,24 +1,46 @@
-<div id='cssmenu'>
+<div class="nav-title">
+  <a class="tab" [ngClass]="{'tab-active': selectedTab === Tab.Editor}" (click)="tabsChanged(Tab.Editor)">
+    <i class="ion-navicon-round"></i>
+  </a>
+  <a class="tab" [ngClass]="{'tab-active': selectedTab === Tab.Featured}" (click)="tabsChanged(Tab.Featured)">
+    <i class="ion-pin"></i>
+  </a>
+  <a class="tab" [ngClass]="{'tab-active': selectedTab === Tab.Recent}" (click)="tabsChanged(Tab.Recent)">
+    <i class="ion-folder"></i>
+  </a>
+</div>
+
+<div *ngIf="selectedTab === Tab.Editor" class="nav-body">
+  <h3>EDITOR</h3>
+  <p class="text-faded">Some text describing something maybe, or just random?</p>
+
   <ul>
-    <img src="../../../assets/images/call_me_al.png" alt="call me al">
-    <li class='last' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink="audio"><span>Audio</span></a>
-    </li>
-    <li class='last' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink="sweet-links"><span>Sweet Links</span></a>
-    </li>
-    <li class='has-sub' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a><span>Beano's Guides</span></a>
-      <ul>
-        <li><a routerLink="guides/winning-at-life"><span>Winning At Life</span></a></li>
-        <li><a routerLink="guides/hobbies"><span>Hobbies</span></a></li>
-        <li class='last'><a routerLink="guides/travel"><span>Travel</span></a></li>
+    <li><a href="#" routerLink="blogs" routerLinkActive="underline-link">Blogs</a></li>
+
+    <li><a href="#" routerLink="audio" routerLinkActive="underline-link">Audio</a></li>
+
+    <li class="subNav"><a (click)="onSubNavClick()" routerLinkActive="underline-link">Beano's Guides <i class="ion-android-arrow-dropdown"></i></a>
+      <ul *ngIf="subNavActive">
+        <li class="inner-list"><a href="" routerLink="guides/hobbies" routerLinkActive="underline-link">Hobbies</a></li>
+        <li class="inner-list"><a href="" routerLink="guides/travel" routerLinkActive="underline-link">Travel</a></li>
+        <li class="inner-list"><a href="" routerLink="guides/winning-at-life" routerLinkActive="underline-link">Winning At Life</a></li>
       </ul>
     </li>
-    <li class='last' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink="blogs"><span>Blogs</span></a>
-    </li>
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink=""><span>Home</span></a>
-    </li>
+
+    <li><a href="#" routerLink="sweet-links" routerLinkActive="underline-link">Sweet Links</a></li>
   </ul>
+
+  <div class="social-wrapper">
+    <a class="facebook"><i class="ion-social-facebook"></i></a>
+    <a class="twitter"><i class="ion-social-twitter"></i></a>
+    <a class="google"><i class="ion-social-googleplus"></i></a>
+  </div>
+</div>
+
+<div *ngIf="selectedTab === Tab.Featured" class="nav-body">
+  <h3>Featured</h3>
+</div>
+
+<div *ngIf="selectedTab === Tab.Recent" class="nav-body">
+  <h3>Recent</h3>
 </div>

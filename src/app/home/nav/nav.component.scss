@@ -1,150 +1,141 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import "../../../variables";
 
-$orange-al: #d35400;
-$hard-grey: #333;
-$soft-grey: #ddd;
+.nav-title {
+  display: flex;
+  flex-flow: row;
+  flex: 1;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 2% 10% 0 10%;
 
-//-------------------------------------
-// Nav
-//-------------------------------------
-
-#cssmenu,
-#cssmenu > ul {
-  padding-bottom: 3px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-}
-
-#cssmenu:before,
-#cssmenu:after,
-#cssmenu > ul:before,
-#cssmenu > ul:after {
-  content: "";
-  display: table;
-}
-
-#cssmenu:after,
-#cssmenu > ul:after {
-  clear: both;
-}
-
-#cssmenu {
-  width: auto;
-  zoom: 1;
-
-  img {
-    height: 55px;
-    width: auto;
-    padding-top: 5px;
-    padding-left: 10px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 37px;
+    margin-right: 5px;
   }
 }
 
-#cssmenu > ul {
-  background-color: $hard-grey;
-  z-index: 999;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  border-bottom: solid 1px $orange-al;
+.nav-body {
+  display: flex;
+  flex-flow: column;
+  flex: 15;
+  align-items: flex-start;
+  background-color: $grey-medium-al;
+  padding: 5% 10%;
 }
 
-#cssmenu > ul li {
-  margin: 0;
-  padding: 0;
+.tab-active {
+  background-color: $grey-medium-al;
+}
+
+.tab {
+  border-radius: 5px 5px 0 0;
+  //padding: 0 6%;
+  //margin-right: 5px;
+  font-size: 140%;
+}
+
+ul {
   list-style: none;
+
+  i {
+    padding-left: 5px;
+  }
+
+  .inner-list {
+    margin-left: 10px;
+    font-size: 80%;
+  }
+
+  a:hover {
+    border-bottom: 2px solid $grey-deep-al;
+  }
 }
 
-#cssmenu > ul > li {
-  float: right;
-  position: relative;
-}
-
-#cssmenu > ul > li > a {
-  padding: 8px 0;
-  margin: 15px 26px;
-  display: block;
-  color: $orange-al;
-  font-size: 13px;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: 18px;
-}
-
-#cssmenu > ul > li:hover > a {
-  color: $orange-al;
-  border-bottom: solid 1px $orange-al;
-}
-
-#cssmenu > ul > li > a > span {
-  line-height: 18px;
-}
-
-#cssmenu > ul > li.active > a,
-#cssmenu > ul > li > a:active {
-  color: $orange-al;
-  border-bottom: solid 1px $orange-al;
-}
-
-/* Childs */
-#cssmenu > ul ul {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 120px;
-  background-color: $hard-grey;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
-}
-
-#cssmenu > ul li:hover ul {
-  opacity: 1;
-  visibility: visible;
-  margin: 0;
-  color: #000;
-  z-index: 2;
-  top: 64px;
-  left: 0;
-}
-
-#cssmenu > ul ul:before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  width: 100%;
-  height: 20px;
-  background: transparent;
-}
-
-#cssmenu > ul ul li {
+a {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-#cssmenu > ul ul li a {
-  padding: 18px 26px;
-  display: block;
-  color: $orange-al;
-  font-size: 13px;
+  color: $black-al;
   text-decoration: none;
-  text-transform: uppercase;
-  width: 170px;
-  border-left: 4px solid transparent;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -ms-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+
+  &:visited, :link, :hover {
+    text-decoration: none;
+    color: $black-al;
+  }
 }
 
-#cssmenu > ul ul li a:hover {
-  border-left: 4px solid #d64e34;
-  background: url(../../../assets/vendor/nav/images/hover.png) repeat;
-  color: $orange-al;
+.social-wrapper {
+  display: flex;
+  flex-flow: row;
+  margin-top: 25px;
+  justify-content: center;
+
+  a {
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+    border-radius: 100%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .twitter:hover {
+    border-color: #00b6f1;
+  }
+
+  .facebook:hover {
+    border-color: #3b5998;
+  }
+
+  .google:hover {
+    border-color: #df4a32
+  }
+
+
+  i {
+    font-size: 150%;
+  }
+
+  .ion-social-facebook {
+    color: #3b5998;
+  }
+
+  .ion-social-twitter {
+    color: #00b6f1;
+  }
+
+  .ion-social-googleplus {
+    color: #df4a32;
+  }
 }
 
-#cssmenu > ul ul li a:active {
-  background: url(../../../assets/vendor/nav/images/menu-bg.png) repeat;
+.subNav {
+  cursor: pointer;
+
+  &::selection {
+    background-color: transparent;
+  }
+
+  a::selection {
+    background-color: transparent;
+  }
+}
+
+.nav-title {
+  a {
+    cursor: pointer;
+
+    &::selection {
+      background-color: transparent;
+    }
+  }
+}
+
+.underline-link {
+  border-bottom: 2px solid $grey-deep-al;
 }

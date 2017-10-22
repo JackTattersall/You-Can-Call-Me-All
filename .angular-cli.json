@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
+        "variables.scss",
         "assets/vendor/css/grid.min.scss",
         "assets/vendor/scss/ionicons.scss"
       ],
