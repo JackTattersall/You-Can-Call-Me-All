@@ -1,2 +1,87 @@
 @import "../../variables";
 
+.blogs-wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+.blog {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 100px;
+  border-bottom: solid 8px $green-al;
+  padding-bottom: 80px;
+}
+
+.blog-image {
+  width: 80%;
+  height: auto;
+  margin: 0 10%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .blog-date {
+    margin: 10px 0;
+  }
+}
+
+.blog-body {
+  display: flex;
+  flex-flow: row;
+
+  .side-bar {
+    display: flex;
+    flex-flow: column;
+    flex: 2;
+    padding-right: 30px;
+
+    .summary {
+      border-top: solid 3px $green-al;
+
+      p {
+        padding: 20px 0;
+        margin: 0;
+      }
+    }
+
+    .links {
+      border-top: solid 2px $green-al;
+      display: flex;
+      flex-flow: column;
+      padding: 20px 0;
+
+      a {
+        margin: 0;
+        text-decoration: none;
+
+        i {
+          color: $tope-al;
+        }
+      }
+    }
+
+    .leave-comment {
+      border-top: solid 2px $green-al;
+      border-bottom: solid 2px $green-al;
+      padding: 20px 0;
+
+      p {
+        margin: 0;
+      }
+
+      i {
+        font-size: 130%;
+        font-weight: 400;
+        color: $tope-al;
+        padding-right: 3px;
+      }
+    }
+  }
+
+  .text {
+    flex: 8;
+  }
+}

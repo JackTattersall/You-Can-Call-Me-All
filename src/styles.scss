@@ -18,6 +18,7 @@ html {
   overflow: auto;
   max-width: 100%;
   tab-size: 4;
+  color: $base-color!important;
 }
 
 .flex-wrapper {
@@ -28,18 +29,31 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 3%;
 }
 
 h1 {
-  font-size: 320%;
+  font-size: 310%;
+  text-align: center;
+  margin-bottom: 45px;
+
+
+  &:after {
+    display: block;
+    height: 2px;
+    background-color: $green-al;
+    content: ' ';
+    width: 100px;
+    margin: 7px auto 0 auto;
+  }
 }
 
 h2 {
   font-size: 275%;
+  margin: 30px 0;
 }
 
 h3 {
@@ -64,7 +78,7 @@ h6 {
   flex-flow: column;
   flex: 13;
   overflow-y: scroll;
-  padding: 8% 6%;
+  padding: 4% 6%;
   border-left: solid 1px $grey-deep-al;
 }
 
