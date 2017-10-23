@@ -1,5 +1,9 @@
 @import "../../../variables";
 
+/////////////////////////////////////////////////
+// NAV TITLE
+/////////////////////////////////////////////////
+
 .nav-title {
   display: flex;
   flex-flow: row;
@@ -19,6 +23,19 @@
   }
 }
 
+.tab-active {
+  background-color: $grey-medium-al;
+}
+
+.tab {
+  border-radius: 5px 5px 0 0;
+  font-size: 140%;
+}
+
+/////////////////////////////////////////////////
+// NAV BODY
+/////////////////////////////////////////////////
+
 .nav-body {
   display: flex;
   flex-flow: column;
@@ -28,19 +45,16 @@
   padding: 5% 10%;
 }
 
-.tab-active {
-  background-color: $grey-medium-al;
-}
-
-.tab {
-  border-radius: 5px 5px 0 0;
-  //padding: 0 6%;
-  //margin-right: 5px;
-  font-size: 140%;
-}
+/////////////////////////////////////////////////
+// NAV MENU
+/////////////////////////////////////////////////
 
 ul {
   list-style: none;
+
+  li {
+    margin: 5px 0;
+  }
 
   i {
     padding-left: 5px;
@@ -56,6 +70,32 @@ ul {
   }
 }
 
+.subNav {
+  cursor: pointer;
+
+  &::selection {
+    background-color: transparent;
+  }
+
+  a::selection {
+    background-color: transparent;
+  }
+}
+
+.nav-title {
+  a {
+    cursor: pointer;
+
+    &::selection {
+      background-color: transparent;
+    }
+  }
+}
+
+.underline-link {
+  border-bottom: 2px solid $grey-deep-al;
+}
+
 a {
   list-style: none;
   color: $black-al;
@@ -66,6 +106,10 @@ a {
     color: $black-al;
   }
 }
+
+/////////////////////////////////////////////////
+// SOCIAL MEDIA
+/////////////////////////////////////////////////
 
 .social-wrapper {
   display: flex;
@@ -116,30 +160,4 @@ a {
   .ion-social-googleplus {
     color: #df4a32;
   }
-}
-
-.subNav {
-  cursor: pointer;
-
-  &::selection {
-    background-color: transparent;
-  }
-
-  a::selection {
-    background-color: transparent;
-  }
-}
-
-.nav-title {
-  a {
-    cursor: pointer;
-
-    &::selection {
-      background-color: transparent;
-    }
-  }
-}
-
-.underline-link {
-  border-bottom: 2px solid $grey-deep-al;
 }

@@ -18,7 +18,7 @@ html {
   overflow: auto;
   max-width: 100%;
   tab-size: 4;
-  color: $base-color!important;
+  color: $base-color;
 }
 
 .flex-wrapper {
@@ -36,15 +36,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 310%;
+  font-size: 400%;
   text-align: center;
   margin-bottom: 45px;
-
+  color: $base-color;
 
   &:after {
     display: block;
     height: 2px;
-    background-color: $green-al;
+    background-color: $grey-deep-al;
     content: ' ';
     width: 100px;
     margin: 7px auto 0 auto;

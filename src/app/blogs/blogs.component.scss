@@ -13,75 +13,97 @@
   padding-bottom: 80px;
 }
 
+/////////////////////////////////////////////////
+// BLOG IMAGE
+/////////////////////////////////////////////////
+
 .blog-image {
-  width: 80%;
-  height: auto;
-  margin: 0 10%;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .blog-date {
-    margin: 10px 0;
-  }
+  //width: 80%;
+  margin: auto 10%;
+  display: flex;
+  flex-flow: column;
 }
+
+.image-container {
+  display: flex;
+  flex-flow: row;
+
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      border-radius: 10px;
+    }
+  }
+
+}
+
+.blog-date {
+  margin: 10px 0;
+}
+
+/////////////////////////////////////////////////
+// BLOG BODY
+/////////////////////////////////////////////////
 
 .blog-body {
   display: flex;
   flex-flow: row;
+}
 
-  .side-bar {
-    display: flex;
-    flex-flow: column;
-    flex: 2;
-    padding-right: 30px;
+// TEXT
+.text {
+  flex: 8;
+}
 
-    .summary {
-      border-top: solid 3px $green-al;
+// SIDE BAR
+.side-bar {
+  display: flex;
+  flex-flow: column;
+  flex: 2;
+  padding-right: 30px;
+}
 
-      p {
-        padding: 20px 0;
-        margin: 0;
-      }
-    }
+.summary {
+  border-top: solid 3px $green-al;
 
-    .links {
-      border-top: solid 2px $green-al;
-      display: flex;
-      flex-flow: column;
-      padding: 20px 0;
+  p {
+    padding: 20px 0;
+    margin: 0;
+  }
+}
 
-      a {
-        margin: 0;
-        text-decoration: none;
+.links {
+  border-top: solid 2px $green-al;
+  display: flex;
+  flex-flow: column;
+  padding: 20px 0;
 
-        i {
-          color: $tope-al;
-        }
-      }
-    }
+  a {
+    margin: 0;
+    text-decoration: none;
 
-    .leave-comment {
-      border-top: solid 2px $green-al;
-      border-bottom: solid 2px $green-al;
-      padding: 20px 0;
-
-      p {
-        margin: 0;
-      }
-
-      i {
-        font-size: 130%;
-        font-weight: 400;
-        color: $tope-al;
-        padding-right: 3px;
-      }
+    i {
+      color: $tope-al;
     }
   }
+}
 
-  .text {
-    flex: 8;
+.leave-comment {
+  border-top: solid 2px $green-al;
+  border-bottom: solid 2px $green-al;
+  padding: 20px 0;
+
+  p {
+    margin: 0;
+  }
+
+  i {
+    font-size: 130%;
+    font-weight: 400;
+    color: $tope-al;
+    padding-right: 3px;
   }
 }
