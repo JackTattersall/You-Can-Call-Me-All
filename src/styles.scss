@@ -11,7 +11,7 @@
 html {
   position: relative;
   background: $grey-al;
-  font-family: "Lato", Courier, monospace;
+  font-family: "Trebuchet MS", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -78,8 +78,8 @@ h6 {
   flex-flow: column;
   flex: 13;
   overflow-y: scroll;
-  padding: 4% 6%;
-  border-left: solid 1px $grey-deep-al;
+  padding: 5% 8%;
+  //border-left: solid 1px $grey-deep-al;
 }
 
 .nav {

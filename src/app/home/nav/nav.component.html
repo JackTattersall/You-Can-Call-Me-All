@@ -11,6 +11,7 @@
 </div>
 
 <div *ngIf="selectedTab === Tab.Editor" class="nav-body">
+  <img class="logo-img" src="../../../assets/images/call_me_al_green.png" alt="call me al">
   <h3>EDITOR</h3>
   <p class="text-faded">Some text describing something maybe, or just random?</p>
 
@@ -30,17 +31,19 @@
     <li><a href="#" routerLink="sweet-links" routerLinkActive="underline-link">Sweet Links</a></li>
   </ul>
 
-  <div class="social-wrapper">
-    <a class="facebook"><i class="ion-social-facebook"></i></a>
-    <a class="twitter"><i class="ion-social-twitter"></i></a>
-    <a class="google"><i class="ion-social-googleplus"></i></a>
-  </div>
+  <!--<div class="social-wrapper">-->
+    <!--<a class="facebook"><i class="ion-social-facebook"></i></a>-->
+    <!--<a class="twitter"><i class="ion-social-twitter"></i></a>-->
+    <!--<a class="google"><i class="ion-social-googleplus"></i></a>-->
+  <!--</div>-->
 </div>
 
 <div *ngIf="selectedTab === Tab.Featured" class="nav-body">
+  <img class="logo-img" src="../../../assets/images/call_me_al_green.png" alt="call me al">
   <h3>Featured</h3>
 </div>
 
 <div *ngIf="selectedTab === Tab.Recent" class="nav-body">
+  <img class="logo-img" src="../../../assets/images/call_me_al_green.png" alt="call me al">
   <h3>Recent</h3>
 </div>
