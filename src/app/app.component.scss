@@ -41,3 +41,25 @@
     text-shadow: 2px 2px 2px black;
   }
 }
+
+
+/////////////////////////////////////////////
+// MEDIA QUERIES
+/////////////////////////////////////////////
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 336px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 375px) {
+  .reader-view {
+    font-size: 150%;
+    bottom: 2%;
+  }
+
+  .closed {
+    left: 35%;
+  }
+}

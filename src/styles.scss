@@ -106,3 +106,24 @@ h6 {
   font-size: 80%;
   margin-bottom: 35px;
 }
+
+/////////////////////////////////////////////
+// MEDIA QUERIES
+/////////////////////////////////////////////
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 336px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 375px) {
+  h3 {
+    font-size: 150%;
+  }
+
+  .text-faded {
+    font-size: 50%;
+  }
+}
+

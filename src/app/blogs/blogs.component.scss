@@ -107,3 +107,44 @@
     padding-right: 3px;
   }
 }
+
+/////////////////////////////////////////////
+// MEDIA QUERIES
+/////////////////////////////////////////////
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 336px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 375px) {
+  .blog-body {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .text {
+    order: 1;
+  }
+
+  .side-bar {
+    order: 2;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-size: 140%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 60%;
+  }
+
+  .text-faded {
+    font-size: 50%;
+    text-align: center;
+  }
+}
