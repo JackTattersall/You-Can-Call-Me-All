@@ -11,7 +11,7 @@ export class NavComponent implements OnInit {
   Tab = Tab;
   public selectedTab: Tab = Tab.Editor;
 
-  subNavActive = true;
+  subNavActive = false;
 
   constructor() { }
 

@@ -104,12 +104,22 @@
     font-size: 130%;
     font-weight: 400;
     color: $tope-al;
-    padding-right: 3px;
+    padding-right: 7px;
   }
 }
 
 .centred {
   text-align: center;
+}
+
+.links-link{
+  display: flex;
+  flex-flow: row;
+  padding: 5px 0;
+
+  i {
+    margin-right: 10px;
+  }
 }
 
 /////////////////////////////////////////////
