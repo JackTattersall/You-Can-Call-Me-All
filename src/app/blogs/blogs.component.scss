@@ -108,13 +108,44 @@
   }
 }
 
+.centred {
+  text-align: center;
+}
+
 /////////////////////////////////////////////
 // MEDIA QUERIES
 /////////////////////////////////////////////
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 336px) {
+/* large Smartphones (portrait) ----------- */
+@media only screen and (max-width : 567px) {
+  .blog-body {
+    display: flex;
+    flex-flow: column;
+  }
 
+  .text {
+    order: 1;
+  }
+
+  .side-bar {
+    order: 2;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-size: 140%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 60%;
+  }
+
+  .text-faded {
+    font-size: 50%;
+    text-align: center;
+  }
 }
 
 /* Smartphones (portrait) ----------- */

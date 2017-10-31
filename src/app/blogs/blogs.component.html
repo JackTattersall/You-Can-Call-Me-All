@@ -2,7 +2,7 @@
 <div class="blogs-wrapper">
 
   <div class="blog">
-    <div class="blog-image">
+    <div *ngIf="!readerView" class="blog-image">
       <div class="image-container">
         <div class="image">
           <img src="../../assets/images/city-1.jpeg" alt="city-1">
@@ -11,11 +11,11 @@
       <p class="blog-date text-faded">OCTOBER 26, 2017 by Alistar Houghton</p>
     </div>
 
-    <h2>The Name of This Blog Post</h2>
+    <h2 [ngClass]="{'centred': readerView}">The Name of This Blog Post</h2>
 
     <div class="blog-body">
 
-      <div class="side-bar">
+      <div *ngIf="!readerView" class="side-bar">
         <div class="summary">
           <p class="text-faded">
             Some stuff, this could probably be the summary of the blog, or anything else?
@@ -64,7 +64,7 @@
   </div>
 
   <div class="blog">
-    <div class="blog-image">
+    <div *ngIf="!readerView" class="blog-image">
       <div class="image-container">
         <div class="image">
           <img src="../../assets/images/city-2.jpg" alt="city-1">
@@ -73,11 +73,11 @@
       <p class="blog-date text-faded">OCTOBER 26, 2017 by Alistar Houghton</p>
     </div>
 
-    <h2>The Name of This Blog Post</h2>
+    <h2 [ngClass]="{'centred': readerView}">The Name of This Blog Post</h2>
 
     <div class="blog-body">
 
-      <div class="side-bar">
+      <div *ngIf="!readerView" class="side-bar">
         <div class="summary">
           <p class="text-faded">
             Some stuff, this could probably be the summary of the blog, or anything else?
@@ -91,7 +91,7 @@
         </div>
 
         <div class="leave-comment">
-          <p class="text-faded"><i class="ion-ios-chatbubble-outline"></i>Leave a comment</p>
+          <p class="text-faded"><i class="ion-ios-chatbubble"></i>Leave a comment</p>
         </div>
 
       </div>

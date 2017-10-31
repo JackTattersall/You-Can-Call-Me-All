@@ -87,6 +87,8 @@ h6 {
   flex: 3;
   flex-flow: column;
   background-color: $grey-deep-al;
+  overflow: hidden;
+  transition: flex 0.4s;
 
   a {
     list-style: none;
@@ -112,11 +114,21 @@ h6 {
 /////////////////////////////////////////////
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 336px) {
+@media only screen and (max-width : 567px) {
+  h3 {
+    font-size: 150%;
+  }
 
+  .text-faded {
+    font-size: 50%;
+  }
+
+  .nav {
+    flex-basis: 18%;
+  }
 }
 
-/* Smartphones (portrait) ----------- */
+/* Large Smartphones (portrait) ----------- */
 @media only screen and (max-width : 375px) {
   h3 {
     font-size: 150%;
@@ -124,6 +136,10 @@ h6 {
 
   .text-faded {
     font-size: 50%;
+  }
+
+  .nav {
+    flex-basis: 24%;
   }
 }
 

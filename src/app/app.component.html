@@ -1,14 +1,15 @@
 <div class="flex-wrapper">
-  <app-nav *ngIf="!navShow" class="nav"></app-nav>
+  <app-nav [ngClass]="{'nav-hidden': navShow}" class="nav"></app-nav>
 
   <div class="main">
     <router-outlet></router-outlet>
 
-    <i *ngIf="!navShow" (click)="onNavShow()" class="ion-ios-more nav-show closed"></i>
-    <i *ngIf="navShow" (click)="onNavShow()" class="ion-ios-more nav-show"></i>
+    <!--<i *ngIf="!navShow" (click)="onNavShow()" class="ion-ios-more nav-show closed"></i>-->
+    <i [ngClass]="{'closed': !navShow}" (click)="onNavShow()" class="ion-ios-more nav-show"></i>
 
-    <i *ngIf="!readerView" (click)="onReaderView()" class="ion-android-expand reader-view"></i>
-    <i *ngIf="readerView" (click)="onReaderView()" class="ion-android-contract reader-view"></i>
-
+    <div [hidden]="!displayReaderViewButton">
+      <i *ngIf="readerView" (click)="onReaderView()" class="ion-android-expand reader-view"></i>
+      <i *ngIf="!readerView" (click)="onReaderView()" class="ion-android-contract reader-view"></i>
+    </div>
   </div>
 </div>

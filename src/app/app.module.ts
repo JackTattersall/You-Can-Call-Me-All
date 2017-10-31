@@ -15,6 +15,7 @@ import {UploadService} from './services/upload.service';
 import { UploadComponent } from './shared/upload/upload.component';
 import {AngularFireModule, FirebaseApp} from 'angularfire2';
 import { InnerNavComponent } from './home/nav/inner-nav/inner-nav.component';
+import {GlobalService} from './services/global.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,10 @@ import { InnerNavComponent } from './home/nav/inner-nav/inner-nav.component';
     AppRouterModule,
     AngularFireModule
   ],
-  providers: [UploadService],
+  providers: [
+    UploadService,
+    GlobalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
