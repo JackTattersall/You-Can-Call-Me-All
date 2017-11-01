@@ -35,7 +35,7 @@ const routes: Routes = [
       { path: 'a-travel', component: ATravelComponent, canActivate: [CanActivateViaAuthGuard] },
       { path: 'a-winning-at-life', component: AWinningAtLifeComponent, canActivate: [CanActivateViaAuthGuard] },
       { path: 'login', component: LoginComponent },
-    ]
+    ],
   },
 ];
 

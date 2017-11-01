@@ -1,133 +1,49 @@
 <h1>Blogs</h1>
 <div class="blogs-wrapper">
+  <ng-container *ngFor="let blog of blogs">
+    <div class="blog">
 
-  <div class="blog">
-
-    <div *ngIf="!readerView" class="blog-image">
-      <div class="image-container">
-        <div class="image">
-          <img src="../../assets/images/city-1.jpeg" alt="city-1">
+      <ng-container *ngFor="let pictures of blog.pictures">
+        <div *ngIf="!readerView" class="blog-image">
+          <div class="image-container">
+            <div class="image">
+              <img src="../../assets/images/city-1.jpeg" alt="city-1">
+            </div>
+          </div>
+          <p class="blog-date text-faded">{{pictures[1]}}</p>
         </div>
-      </div>
-      <p class="blog-date text-faded">OCTOBER 26, 2017 by Alistar Houghton</p>
-    </div>
+      </ng-container>
 
-    <h2 [ngClass]="{'centred': readerView}">The Name of This Blog Post</h2>
+      <h2 [ngClass]="{'centred': readerView}">{{blog.title}}</h2>
 
-    <div class="blog-body">
-      <div *ngIf="!readerView" class="side-bar">
-        <div class="summary">
-          <p class="text-faded">
-            Some stuff, this could probably be the summary of the blog, or anything else?
-            Or nothing at all, your choice.
+      <div class="blog-body">
+        <div *ngIf="!readerView" class="side-bar">
+          <div class="summary">
+            <p class="text-faded">
+              {{blog.summary}}
+            </p>
+          </div>
+
+          <div class="links">
+            <ng-container *ngFor="let link of blog.links">
+              <a href="#" class="text-faded links-link">
+                <i class="ion-link"></i>
+                <p>{{link}}</p>
+              </a>
+            </ng-container>
+          </div>
+
+          <div class="leave-comment">
+            <p class="text-faded"><i class="ion-ios-chatbubble"></i>Leave a comment</p>
+          </div>
+
+        </div>
+        <div class="text">
+          <p>
+            {{blog.text}}
           </p>
         </div>
-
-        <div class="links">
-          <a href="#" class="text-faded links-link">
-            <i class="ion-link"></i>
-            <p>A link to related pictures</p>
-          </a>
-          <a href="#" class="text-faded links-link">
-            <i class="ion-link"></i>
-            <p>A link to related audio</p>
-          </a>
-        </div>
-
-        <div class="leave-comment">
-          <p class="text-faded"><i class="ion-ios-chatbubble"></i>Leave a comment</p>
-        </div>
-
-      </div>
-      <div class="text">
-        <p>
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and
-        </p>
       </div>
     </div>
-  </div>
-
-  <div class="blog">
-    <div *ngIf="!readerView" class="blog-image">
-      <div class="image-container">
-        <div class="image">
-          <img src="../../assets/images/city-2.jpg" alt="city-1">
-        </div>
-      </div>
-      <p class="blog-date text-faded">OCTOBER 26, 2017 by Alistar Houghton</p>
-    </div>
-
-    <h2 [ngClass]="{'centred': readerView}">The Name of This Blog Post</h2>
-
-    <div class="blog-body">
-
-      <div *ngIf="!readerView" class="side-bar">
-        <div class="summary">
-          <p class="text-faded">
-            Some stuff, this could probably be the summary of the blog, or anything else?
-            Or nothing at all, your choice.
-          </p>
-        </div>
-
-        <div class="links">
-          <a href="#" class="text-faded"><i class="ion-link"></i> A link to related pictures</a>
-          <a href="#" class="text-faded"><i class="ion-link"></i> A link to related audio</a>
-        </div>
-
-        <div class="leave-comment">
-          <p class="text-faded"><i class="ion-ios-chatbubble"></i>Leave a comment</p>
-        </div>
-
-      </div>
-
-      <div class="text">
-        <p>
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and size of this thing is
-          Lots of text to determine what the shape and
-        </p>
-      </div>
-    </div>
-  </div>
-
+  </ng-container>
 </div>

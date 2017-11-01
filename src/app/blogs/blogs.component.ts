@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {GlobalService} from '../services/global.service';
+import {BlogService} from '../services/blog.service';
+import {Blog} from '../models/blog';
 
 @Component({
   selector: 'app-blogs',
@@ -10,10 +12,22 @@ import {GlobalService} from '../services/global.service';
 export class BlogsComponent implements OnInit, OnDestroy {
   readerView = false;
   readerViewSub: Subscription;
+  blogs: Blog[];
+  blogsSub: Subscription;
 
-  constructor(private globalService: GlobalService) { }
+  constructor(
+    private globalService: GlobalService,
+    private  blogService: BlogService
+  ) { }
 
   ngOnInit() {
+    this.blogs = this.blogService.blogs;
+    this.blogsSub = this.blogService.blogsChanged
+      .subscribe(
+        data => this.blogs = data,
+        err => `blogsSub error: ${err}`
+      );
+
     // Set the toggle ReaderView button to true on navigation to blog
     this.globalService.toggleReaderViewButton();
 
@@ -27,6 +41,7 @@ export class BlogsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.readerViewSub.unsubscribe();
+    this.blogsSub.unsubscribe();
 
     // Set the toggle ReaderView button to false on navigation away from blog
     this.globalService.toggleReaderViewButton();

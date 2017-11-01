@@ -26,6 +26,7 @@ import { ATravelComponent } from './admin/a-travel/a-travel.component';
 import { AWinningAtLifeComponent } from './admin/a-winning-at-life/a-winning-at-life.component';
 import { ASweetLinksComponent } from './admin/a-sweet-links/a-sweet-links.component';
 import {CanActivateViaAuthGuard} from './shared/auth-guard';
+import {BlogService} from './services/blog.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {CanActivateViaAuthGuard} from './shared/auth-guard';
     UploadService,
     GlobalService,
     AuthService,
-    CanActivateViaAuthGuard
+    CanActivateViaAuthGuard,
+    BlogService
   ],
   bootstrap: [AppComponent]
 })

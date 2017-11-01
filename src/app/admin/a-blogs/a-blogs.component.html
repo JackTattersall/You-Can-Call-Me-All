@@ -1,43 +1,43 @@
 <div class="a-blogs-container">
   <h2>Blogs</h2>
 
-  <form>
+  <form (ngSubmit)="onSubmitBlog(f)" #f="ngForm">
     <div class="blog-form-item">
       <label for="blog-title">Title</label>
-      <input class="blog-title" type="text" id="blog-title">
+      <input class="blog-title" type="text" id="blog-title" name="blogTitle" ngModel>
     </div>
 
     <div class="blog-form-item">
       <label for="blog-text">Text</label>
-      <textarea class="blog-text" id="blog-text">hello</textarea>
+      <textarea class="blog-text" id="blog-text" name="blogText" ngModel>hello</textarea>
     </div>
 
     <div class="blog-form-item">
       <label for="blog-summary">Summary</label>
-      <textarea class="blog-summary" id="blog-summary">hello</textarea>
+      <textarea class="blog-summary" id="blog-summary" name="blogSummary" ngModel>hello</textarea>
     </div>
 
     <div class="form-bottom">
       <div class="form-bottom-inputs">
         <div class="blog-form-item">
           <label for="blog-link">Link</label>
-          <input class="blog-link" type="text" id="blog-link">
+          <input class="blog-link" type="text" id="blog-link" name="blogLink" ngModel>
         </div>
 
         <div class="blog-form-item">
           <label for="blog-picture">Picture</label>
-          <input class="blog-picture" type="text" id="blog-picture">
+          <input class="blog-picture" type="text" id="blog-picture" name="blogPicture" ngModel>
         </div>
 
         <div class="blog-form-item">
           <label for="blog-picture-text">Picture Text</label>
-          <input class="blog-picture-text" type="text" id="blog-picture-text">
+          <input class="blog-picture-text" type="text" id="blog-picture-text" name="blogPictureText" ngModel>
         </div>
 
         <div class="blog-form-item">
-          <div class="btn">
+          <button class="btn" type="submit">
             Add
-          </div>
+          </button>
         </div>
       </div>
 

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {BlogService} from '../../services/blog.service';
+import {NgForm} from '@angular/forms';
+import {Blog} from '../../models/blog';
 
 @Component({
   selector: 'app-a-blogs',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ABlogsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private blogService: BlogService) { }
 
   ngOnInit() {
   }
 
+  onSubmitBlog(form: NgForm) {
+    const blog = new Blog(
+    form.value.blogText,
+    form.value.blogSummary,
+    form.value.blogTitle,
+    [form.value.blogLink],
+    [[form.value.blogPicture, form.value.blogPictureText]],
+    Date.now().toString()
+    );
+
+    this.blogService.addBlog(blog);
+    this.blogService.retrieveBlogs();
+  }
 }
