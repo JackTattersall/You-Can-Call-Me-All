@@ -22,6 +22,7 @@ export class AuthService {
                 this.token = token;
                 this.loggedIn = true;
                 this.loggedInChanged.next(this.loggedIn);
+                localStorage.setItem('id', this.token);
               }
             );
         }
@@ -36,6 +37,8 @@ export class AuthService {
     this.token = null;
     this.loggedIn = false;
     this.loggedInChanged.next(this.loggedIn);
+    // todo implement session based on this and maybe firebases is authenticated method
+    localStorage.clear();
   }
 
 }
