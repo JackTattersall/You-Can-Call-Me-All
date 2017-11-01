@@ -1,10 +1,129 @@
+@import "../../../variables";
+
 .a-blogs-container {
   width: 100%;
   display: flex;
-  margin: 50px 0;
+  margin: 70px 0;
+  flex-flow: column;
+
+  h2 {
+    padding-bottom: 20px;
+  }
 }
 
 :host(app-a-blogs) {
   width: 100%;
   display: flex;
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+  font-size: 100%;
+  font-weight: 400;
+  border: solid 1px $grey-medium-al;
+  background-color: $grey-al;
+  box-shadow: 0.6px 0.6px 1px $base-color;
+}
+
+.blog-text {
+  height: 200px;
+}
+
+.blog-summary {
+  height: 100px;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  border: solid 1px $grey-medium-al;
+  background-color: $grey-medium-al;
+  box-shadow: 0.6px 0.6px 1px $base-color;
+  border-radius: 5px;
+}
+
+input {
+  min-width: 50%;
+  border-radius: 5px;
+  min-height: 35px;
+  font-size: 100%;
+  border: solid 1px $grey-medium-al;
+  background-color: $grey-al;
+  box-shadow: 0.6px 0.6px 1px $base-color;
+}
+
+.blog-form-item {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 10px;
+  align-items: flex-start;
+}
+
+label {
+  padding-bottom: 8px;
+
+  &:after {
+    display: block;
+    height: 2px;
+    background-color: $grey-deep-al;
+    content: ' ';
+    width: 80%;
+    margin: 0 10%;
+  }
+}
+
+.btn {
+  margin-top: 30px;
+  text-align: center;
+  padding: 3px 5px;
+  border: 1px solid $grey-deep-al;
+  width: 100px;
+  max-width: 100px;
+  border-radius: 5px;
+  background-color: $grey-deep-al;
+  box-shadow: 0.7px 0.7px 0.7px black;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    box-shadow: 1px 1px 2px black;
+  }
+
+  &:active {
+    box-shadow: inset 0.7px 0.7px 0.7px black;
+  }
+}
+
+.form-bottom {
+  display: flex;
+  flex-flow: row;
+}
+
+.form-bottom-inputs {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+
+  input {
+    width: 100%;
+  }
+}
+
+.form-bottom-pic {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  .form-pic {
+    padding: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
 }
