@@ -17,7 +17,8 @@ export class BlogService {
       text: blog.text,
       summary: blog.summary,
       links: blog.links,
-      pictures: blog.pictures
+      pictures: blog.pictures,
+      date: blog.date
     });
   }
 

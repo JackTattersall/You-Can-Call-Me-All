@@ -22,8 +22,10 @@ export class ABlogsComponent implements OnInit {
     form.value.blogTitle,
     [form.value.blogLink],
     [[form.value.blogPicture, form.value.blogPictureText]],
-    Date.now().toString()
+    new Date().toUTCString()
     );
+
+    form.resetForm();
 
     this.blogService.addBlog(blog);
     this.blogService.retrieveBlogs();

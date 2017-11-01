@@ -10,7 +10,7 @@
               <img src="../../assets/images/city-1.jpeg" alt="city-1">
             </div>
           </div>
-          <p class="blog-date text-faded">{{pictures[1]}}</p>
+          <p class="blog-date text-faded">{{pictures[1]}} {{blog.date}}</p>
         </div>
       </ng-container>
 
@@ -24,7 +24,7 @@
             </p>
           </div>
 
-          <div class="links">
+          <div *ngIf="blog.links[0]" class="links">
             <ng-container *ngFor="let link of blog.links">
               <a href="#" class="text-faded links-link">
                 <i class="ion-link"></i>
