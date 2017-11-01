@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavComponent } from './home/nav/nav.component';
+import { AdminComponent } from './admin/admin.component';
+import { NavComponent } from './nav/nav.component';
 import {AppRouterModule} from './app-router-module';
 import { WinningAtLifeComponent } from './guides/winning-at-life/winning-at-life.component';
 import { HobbiesComponent } from './guides/hobbies/hobbies.component';
@@ -14,13 +14,15 @@ import { BlogsComponent } from './blogs/blogs.component';
 import {UploadService} from './services/upload.service';
 import { UploadComponent } from './shared/upload/upload.component';
 import {AngularFireModule, FirebaseApp} from 'angularfire2';
-import { InnerNavComponent } from './home/nav/inner-nav/inner-nav.component';
+import { InnerNavComponent } from './nav/inner-nav/inner-nav.component';
 import {GlobalService} from './services/global.service';
+import { LoginComponent } from './admin/login/login.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    AdminComponent,
     NavComponent,
     WinningAtLifeComponent,
     HobbiesComponent,
@@ -29,12 +31,14 @@ import {GlobalService} from './services/global.service';
     AudioComponent,
     BlogsComponent,
     UploadComponent,
-    InnerNavComponent
+    InnerNavComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRouterModule,
-    AngularFireModule
+    AngularFireModule,
+    FormsModule
   ],
   providers: [
     UploadService,

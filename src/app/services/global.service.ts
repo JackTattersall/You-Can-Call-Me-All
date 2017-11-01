@@ -10,6 +10,8 @@ export class GlobalService implements OnInit {
 
   constructor() { }
 
+  // todo There are two lots of variables and functions in here that are reacting to the same event
+  // todo refactor into one.
   toggleReaderView() {
     this.readerViewMode = !this.readerViewMode;
     this.readerViewModeChanged.next(this.readerViewMode);

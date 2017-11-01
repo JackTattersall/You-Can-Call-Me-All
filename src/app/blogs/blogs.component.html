@@ -2,6 +2,7 @@
 <div class="blogs-wrapper">
 
   <div class="blog">
+
     <div *ngIf="!readerView" class="blog-image">
       <div class="image-container">
         <div class="image">
@@ -14,7 +15,6 @@
     <h2 [ngClass]="{'centred': readerView}">The Name of This Blog Post</h2>
 
     <div class="blog-body">
-
       <div *ngIf="!readerView" class="side-bar">
         <div class="summary">
           <p class="text-faded">
@@ -39,7 +39,6 @@
         </div>
 
       </div>
-
       <div class="text">
         <p>
           Lots of text to determine what the shape and size of this thing is

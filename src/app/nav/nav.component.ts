@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Tab } from '../../shared/tab-enum';
+import { Tab } from '../shared/tab-enum';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +8,10 @@ import { Tab } from '../../shared/tab-enum';
 })
 export class NavComponent implements OnInit {
 
-  Tab = Tab;
-  public selectedTab: Tab = Tab.Editor;
+  Tab = Tab; // Needed to get access to this enum type
+  public selectedTab: Tab = Tab.Editor; // Editor is the default tab
 
+  // Controls the nav-bars sub-nav
   subNavActive = false;
 
   constructor() { }
@@ -18,10 +19,12 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Controls the switching of nav tabs
   tabsChanged(tab: Tab) {
     this.selectedTab = tab;
   }
 
+  // Controls the nav's dropdown
   public onSubNavClick() {
     this.subNavActive = !this.subNavActive;
   }

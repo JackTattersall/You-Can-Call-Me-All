@@ -14,9 +14,10 @@ export class BlogsComponent implements OnInit, OnDestroy {
   constructor(private globalService: GlobalService) { }
 
   ngOnInit() {
-    console.log('init');
+    // Set the toggle ReaderView button to true on navigation to blog
     this.globalService.toggleReaderViewButton();
 
+    // Subscribe to the Reader View mode changed boolean in the global service
     this.readerViewSub = this.globalService.readerViewModeChanged
       .subscribe(
         data => this.readerView = data,
@@ -25,8 +26,9 @@ export class BlogsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log('destroy');
     this.readerViewSub.unsubscribe();
+
+    // Set the toggle ReaderView button to false on navigation away from blog
     this.globalService.toggleReaderViewButton();
   }
 

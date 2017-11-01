@@ -13,6 +13,8 @@ export class AppComponent implements OnInit, OnDestroy {
   readerView = false;
   navShow = false;
 
+  // todo refactor this into one thing too maybe?
+
   constructor(private globalService: GlobalService) {}
 
   onNavShow() {
