@@ -5,3 +5,48 @@
   justify-content: center;
 }
 
+.admin-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.admin-nav {
+  display: flex;
+
+  ul {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    li {
+      list-style: none;
+      margin: auto 25px;
+
+      a {
+        text-transform: none;
+        text-decoration: none;
+        transition: border-bottom 0.3s;
+        border-bottom: 1.7px solid transparent;
+
+        &:visited, :hover, :active, :link{
+          color: $base-color;
+        }
+
+        &:hover {
+          border-bottom: solid 1.7px $grey-deep-al;
+        }
+      }
+    }
+  }
+}
+
+.nav-underline {
+  border-bottom: solid 1.7px $grey-deep-al!important;
+}
+
+.admin-router-outlet {
+  display: flex;
+}

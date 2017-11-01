@@ -1,2 +1,15 @@
 <h1>Admin</h1>
-<app-login class="app-login"></app-login>
+<div class="admin-container">
+  <div *ngIf="loggedIn" class="admin-nav">
+    <ul>
+      <li><a href="" routerLinkActive="nav-underline" routerLink="a-blogs">Blogs</a></li>
+      <li><a href="" routerLinkActive="nav-underline" routerLink="a-audio">Audio</a></li>
+      <li><a href="" routerLinkActive="nav-underline" routerLink="a-hobbies">Hobbies</a></li>
+      <li><a href="" routerLinkActive="nav-underline" routerLink="a-travel">Travel</a></li>
+      <li><a href="" routerLinkActive="nav-underline" routerLink="a-winning-at-life">Winning At Life</a></li>
+      <li><a href="" routerLinkActive="nav-underline" routerLink="a-sweet-links">Sweet Links</a></li>
+    </ul>
+  </div>
+  <router-outlet class="admin-router-outlet"></router-outlet>
+</div>
+

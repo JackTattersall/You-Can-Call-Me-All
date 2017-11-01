@@ -1,0 +1,10 @@
+.a-hobbies-container {
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+}
+
+:host(app-a-hobbies) {
+  width: 100%;
+  display: flex;
+}

@@ -1,0 +1,10 @@
+.a-winning-at-life-container {
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+}
+
+:host(app-a-winning-at-life) {
+  width: 100%;
+  display: flex;
+}

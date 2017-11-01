@@ -65,8 +65,13 @@ ul {
     font-size: 80%;
   }
 
-  a:hover {
-    border-bottom: 2px solid $grey-deep-al;
+  a {
+    transition: border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid $grey-deep-al;
+    }
   }
 }
 

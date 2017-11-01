@@ -1,0 +1,10 @@
+.a-audio-container {
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+}
+
+:host(app-a-audio) {
+  width: 100%;
+  display: flex;
+}

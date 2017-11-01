@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {GlobalService} from './services/global.service';
 import {Subscription} from 'rxjs/Subscription';
+import * as firebase from 'firebase';
+import {environment} from '../environments/environment.prod';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    firebase.initializeApp(environment.firebase);
+
     this.displayReaderViewButtonSub = this.globalService.displayReaderViewButtonChanged
       .subscribe(
         data => this.displayReaderViewButton = data,

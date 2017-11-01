@@ -18,6 +18,14 @@ import { InnerNavComponent } from './nav/inner-nav/inner-nav.component';
 import {GlobalService} from './services/global.service';
 import { LoginComponent } from './admin/login/login.component';
 import {FormsModule} from '@angular/forms';
+import {AuthService} from './services/auth.service';
+import { ABlogsComponent } from './admin/a-blogs/a-blogs.component';
+import { AAudioComponent } from './admin/a-audio/a-audio.component';
+import { AHobbiesComponent } from './admin/a-hobbies/a-hobbies.component';
+import { ATravelComponent } from './admin/a-travel/a-travel.component';
+import { AWinningAtLifeComponent } from './admin/a-winning-at-life/a-winning-at-life.component';
+import { ASweetLinksComponent } from './admin/a-sweet-links/a-sweet-links.component';
+import {CanActivateViaAuthGuard} from './shared/auth-guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +40,13 @@ import {FormsModule} from '@angular/forms';
     BlogsComponent,
     UploadComponent,
     InnerNavComponent,
-    LoginComponent
+    LoginComponent,
+    ABlogsComponent,
+    AAudioComponent,
+    AHobbiesComponent,
+    ATravelComponent,
+    AWinningAtLifeComponent,
+    ASweetLinksComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +56,9 @@ import {FormsModule} from '@angular/forms';
   ],
   providers: [
     UploadService,
-    GlobalService
+    GlobalService,
+    AuthService,
+    CanActivateViaAuthGuard
   ],
   bootstrap: [AppComponent]
 })

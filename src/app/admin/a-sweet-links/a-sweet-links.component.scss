@@ -1,0 +1,10 @@
+.a-sweet-links-container {
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+}
+
+:host(app-a-sweet-links) {
+  width: 100%;
+  display: flex;
+}
